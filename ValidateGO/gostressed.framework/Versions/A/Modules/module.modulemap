@@ -1,0 +1,4 @@
+framework module "Gostressed" {
+    header "Gostressed.h"
+    export *
+}
