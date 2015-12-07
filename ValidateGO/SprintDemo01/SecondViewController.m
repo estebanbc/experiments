@@ -125,8 +125,12 @@
 }
 
 -(void)performGETRequest {
+    NSDate *start = [NSDate date];
     dispatch_async(httpQueue, ^{
         __block NSString *site = GoGostressedHTTPGetCall();
+        NSDate *methodFinish = [NSDate date];
+        NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:start];
+        [self logToTaskLog:[NSString stringWithFormat:@"GET Request Time: %f", executionTime]];
         dispatch_async(dispatch_get_main_queue(), ^{
             [self logToRequestLog:site];
         });

@@ -158,14 +158,19 @@
 }
 
 -(void)performGETRequest {
-    [[session dataTaskWithURL:[NSURL URLWithString:@"http://www.theverge.com/"]
+    NSDate *start = [NSDate date];
+    [[session dataTaskWithURL:[NSURL URLWithString:@"https://www.google.com/"]
             completionHandler:^(NSData *data,
                                 NSURLResponse *response,
                                 NSError *error) {
                 
+                __block NSString *resp = [NSString stringWithUTF8String:[data bytes]];
+                NSDate *methodFinish = [NSDate date];
+                NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:start];
+                [self logToTaskLog:[NSString stringWithFormat:@"GET Request Time: %f", executionTime]];
                 if (error == nil) {
                     dispatch_async(dispatch_get_main_queue(), ^{
-                        [self logToRequestLog:[NSString stringWithUTF8String:[data bytes]]];
+                        [self logToRequestLog:resp];
                     });
                 }
             }] resume];
@@ -215,11 +220,10 @@
 }
 
 -(NSString *)hashImageFile {
+    NSDate *start = [NSDate date];
     UIImage* image = [UIImage imageNamed:@"Yosemite.png"];
     NSData* imageData = UIImagePNGRepresentation(image);
     NSMutableData *macOut = [NSMutableData dataWithLength:CC_SHA256_DIGEST_LENGTH];
-
-    NSDate *start = [NSDate date];
         CC_SHA256(imageData.bytes, imageData.length,  macOut.mutableBytes);
     NSDate *methodFinish = [NSDate date];
     NSTimeInterval executionTime = [methodFinish timeIntervalSinceDate:start];

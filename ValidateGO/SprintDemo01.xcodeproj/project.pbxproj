@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0A1832AC1C15E3BB007417A1 /* gostressed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A1832AB1C15E3BB007417A1 /* gostressed.framework */; };
 		0A28D0E61C108EDA007ED972 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A28D0E51C108EDA007ED972 /* main.m */; };
 		0A28D0E91C108EDA007ED972 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A28D0E81C108EDA007ED972 /* AppDelegate.m */; };
 		0A28D0EC1C108EDA007ED972 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A28D0EB1C108EDA007ED972 /* FirstViewController.m */; };
@@ -20,10 +19,10 @@
 		0A28D1071C109F04007ED972 /* BlabCake.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0A28D1061C109F04007ED972 /* BlabCake.txt */; };
 		0A28D10B1C10A13E007ED972 /* Yosemite.png in Resources */ = {isa = PBXBuildFile; fileRef = 0A28D10A1C10A13E007ED972 /* Yosemite.png */; };
 		0A28D11A1C11E1F2007ED972 /* MainNotifier.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A28D1191C11E1F2007ED972 /* MainNotifier.m */; };
+		0A8FFEA81C16423D000E4CA0 /* gostressed.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A8FFEA71C16423D000E4CA0 /* gostressed.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0A1832AB1C15E3BB007417A1 /* gostressed.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = gostressed.framework; sourceTree = "<group>"; };
 		0A28D0E11C108EDA007ED972 /* SprintDemo01.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SprintDemo01.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0A28D0E51C108EDA007ED972 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0A28D0E71C108EDA007ED972 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,6 +43,7 @@
 		0A28D1111C110195007ED972 /* SprintDemo01-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SprintDemo01-Prefix.pch"; sourceTree = "<group>"; };
 		0A28D1181C11E1F2007ED972 /* MainNotifier.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainNotifier.h; sourceTree = "<group>"; };
 		0A28D1191C11E1F2007ED972 /* MainNotifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainNotifier.m; sourceTree = "<group>"; };
+		0A8FFEA71C16423D000E4CA0 /* gostressed.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = gostressed.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,7 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0A1832AC1C15E3BB007417A1 /* gostressed.framework in Frameworks */,
+				0A8FFEA81C16423D000E4CA0 /* gostressed.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,7 +61,7 @@
 		0A28D0D81C108EDA007ED972 = {
 			isa = PBXGroup;
 			children = (
-				0A1832AB1C15E3BB007417A1 /* gostressed.framework */,
+				0A8FFEA71C16423D000E4CA0 /* gostressed.framework */,
 				0A28D0E31C108EDA007ED972 /* SprintDemo01 */,
 				0A28D0E21C108EDA007ED972 /* Products */,
 			);
